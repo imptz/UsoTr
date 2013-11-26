@@ -213,7 +213,7 @@
     <GenerateManifest>false</GenerateManifest>
     <LibraryPath>$(LibraryPath)</LibraryPath>
     <PostBuildEventUseInBuild>true</PostBuildEventUseInBuild>
-    <IncludePath>C:\Projects\Svn\CppCode\trunk\Src;$(IncludePath)</IncludePath>
+    <IncludePath>D:\Ilja\Piter\UsoTr\Trunk\sources\kernel\lib\cppCode;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

@@ -75,7 +75,7 @@ class Config : public Singleton<Config>, public ITimer, public MessageSender, pu
 		unsigned int dataSize;
 		int loadDataSize;
 public:
-		static const unsigned int MAX_DATA_SIZE = 1024 * 1024 * 20;
+		static const unsigned int MAX_DATA_SIZE = 1024 * 256;
 private:
 		unsigned char* buffer;
 		static const unsigned int LENGTH_AREA_SIZE = 4;

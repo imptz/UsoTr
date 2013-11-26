@@ -3,7 +3,7 @@
 #include "../DEBUG/serialDebug.h"
 
 ConfigData::ConfigData(unsigned int _BUFFER_SIZE)
-	:	ITimer(TIMER_PERIOD), cData(nullptr), cDataNew(nullptr), phase(CONFIG_DATA_PHASE_READ_1), BUFFER_SIZE(_BUFFER_SIZE), buffer(new unsigned char[BUFFER_SIZE])
+	:	ITimer(TIMER_PERIOD), cData(nullptr), cDataNew(nullptr), phase(CONFIG_DATA_PHASE_READ_1), buffer(new unsigned char[BUFFER_SIZE])
 {
 	pTimer->start();
 }

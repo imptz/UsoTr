@@ -42,8 +42,8 @@ class ConfigData : public ITimer
 	private:
 		CONFIG_DATA_PHASE phase;
 
-		static const unsigned int START_SECTOR = 100000;
-		unsigned int BUFFER_SIZE; 
+		static const unsigned int START_SECTOR = 50000;
+		static const unsigned int BUFFER_SIZE = 512 * 128; 
 		unsigned char* buffer;
 		unsigned int taskId;
 
