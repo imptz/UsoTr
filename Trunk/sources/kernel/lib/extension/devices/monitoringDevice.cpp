@@ -527,16 +527,16 @@ void MonitoringDevice::setOutputs(unsigned char* pMsg)
 			IOSubsystem::getSingleton().disablePrPressureOutputs(pMsg[MESSAGE_PAR2_OFFSET]);
 			break;
 		case MESSAGE_NUMBER_ZATVOR_OTKRIT:
-			IOSubsystem::getSingleton().enableGateOutputs(pMsg[MESSAGE_PAR2_OFFSET]);
-			IOSubsystem::getSingleton().disableGatePriotkritOutputs(pMsg[MESSAGE_PAR2_OFFSET]);
-			break;
-		case MESSAGE_NUMBER_ZATVOR_ZAKRIT:
-			IOSubsystem::getSingleton().disableGateOutputs(pMsg[MESSAGE_PAR2_OFFSET]);
-			IOSubsystem::getSingleton().disableGatePriotkritOutputs(pMsg[MESSAGE_PAR2_OFFSET]);
+			IOSubsystem::getSingleton().enableGateOpenOutputs(pMsg[MESSAGE_PAR2_OFFSET]);
+			IOSubsystem::getSingleton().disableGateCloseOutputs(pMsg[MESSAGE_PAR2_OFFSET]);
 			break;
 		case MESSAGE_NUMBER_ZATVOR_PRIOTKRIT:
-			IOSubsystem::getSingleton().disableGateOutputs(pMsg[MESSAGE_PAR2_OFFSET]);
-			IOSubsystem::getSingleton().enableGatePriotkritOutputs(pMsg[MESSAGE_PAR2_OFFSET]);
+			IOSubsystem::getSingleton().disableGateOpenOutputs(pMsg[MESSAGE_PAR2_OFFSET]);
+			IOSubsystem::getSingleton().disableGateCloseOutputs(pMsg[MESSAGE_PAR2_OFFSET]);
+			break;
+		case MESSAGE_NUMBER_ZATVOR_ZAKRIT:
+			IOSubsystem::getSingleton().disableGateOpenOutputs(pMsg[MESSAGE_PAR2_OFFSET]);
+			IOSubsystem::getSingleton().enableGateCloseOutputs(pMsg[MESSAGE_PAR2_OFFSET]);
 			break;
 		case MESSAGE_NUMBER_ZATVOR_OSHIBKA:
 			IOSubsystem::getSingleton().enableGateFaultOutputs(pMsg[MESSAGE_PAR2_OFFSET]);

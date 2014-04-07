@@ -93,10 +93,10 @@ class IOSubsystem : public Singleton<IOSubsystem>, public ISubsystem
 		void disableAllPumpStationOutputs();
 		void enablePrPressureOutputs(unsigned char number);
 		void disablePrPressureOutputs(unsigned char number);
-		void enableGateOutputs(unsigned char number);
-		void disableGateOutputs(unsigned char number);
-		void enableGatePriotkritOutputs(unsigned char number);
-		void disableGatePriotkritOutputs(unsigned char number);
+		void enableGateOpenOutputs(unsigned char number);
+		void disableGateOpenOutputs(unsigned char number);
+		void enableGateCloseOutputs(unsigned char number);
+		void disableGateCloseOutputs(unsigned char number);
 		void enableSystemFaultOutputs();
 		void disableSystemFaultOutputs();
 		void enablePrFaultOutputs(unsigned char number);

@@ -372,7 +372,7 @@ void ConfigData::setData(unsigned char* data, unsigned int length)
 				cDataNew->_IOBk16[i]->outputFunctionGroup = ConfigDataStructIOBk16::OUTPUT_FUNCTION_GROUP_GATE_FAULT;
 				break;
 			case 11:
-				cDataNew->_IOBk16[i]->outputFunctionGroup = ConfigDataStructIOBk16::OUTPUT_FUNCTION_GROUP_GATE_PRIOTKRIT;
+				cDataNew->_IOBk16[i]->outputFunctionGroup = ConfigDataStructIOBk16::OUTPUT_FUNCTION_GROUP_GATE_CLOSE;
 				break;
 		}
 

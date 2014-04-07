@@ -281,7 +281,7 @@ void IOSubsystem::disablePrPressureOutputs(unsigned char number)
 		}
 }
 
-void IOSubsystem::enableGateOutputs(unsigned char number)
+void IOSubsystem::enableGateOpenOutputs(unsigned char number)
 {
 	ConfigDataStructIOBk16** outputs = Config::getSingleton().getConfigData()->getConfigDataStructIOBk16();
 	for (unsigned int i = 0; i < Config::getSingleton().getConfigData()->getConfigDataStructIOBk16Count(); i++)
@@ -294,7 +294,7 @@ void IOSubsystem::enableGateOutputs(unsigned char number)
 		}
 }
 
-void IOSubsystem::disableGateOutputs(unsigned char number)
+void IOSubsystem::disableGateOpenOutputs(unsigned char number)
 {
 	ConfigDataStructIOBk16** outputs = Config::getSingleton().getConfigData()->getConfigDataStructIOBk16();
 	for (unsigned int i = 0; i < Config::getSingleton().getConfigData()->getConfigDataStructIOBk16Count(); i++)
@@ -307,21 +307,21 @@ void IOSubsystem::disableGateOutputs(unsigned char number)
 		}
 }
 
-void IOSubsystem::enableGatePriotkritOutputs(unsigned char number)
+void IOSubsystem::enableGateCloseOutputs(unsigned char number)
 {
 	ConfigDataStructIOBk16** outputs = Config::getSingleton().getConfigData()->getConfigDataStructIOBk16();
 	for (unsigned int i = 0; i < Config::getSingleton().getConfigData()->getConfigDataStructIOBk16Count(); i++)
-		if ((outputs[i]->outputFunctionGroup == ConfigDataStructIOBk16::OUTPUT_FUNCTION_GROUP_GATE_PRIOTKRIT) && (outputs[i]->prGateNumber == number))
+		if ((outputs[i]->outputFunctionGroup == ConfigDataStructIOBk16::OUTPUT_FUNCTION_GROUP_GATE_CLOSE) && (outputs[i]->prGateNumber == number))
 		{
 			setOutput((outputs[i]->bkAddress - 1) * 8 + outputs[i]->numberOnDevice - 1, IIODevice::OUTPUT_STATE_ON);
 		}
 }
 
-void IOSubsystem::disableGatePriotkritOutputs(unsigned char number)
+void IOSubsystem::disableGateCloseOutputs(unsigned char number)
 {
 	ConfigDataStructIOBk16** outputs = Config::getSingleton().getConfigData()->getConfigDataStructIOBk16();
 	for (unsigned int i = 0; i < Config::getSingleton().getConfigData()->getConfigDataStructIOBk16Count(); i++)
-		if ((outputs[i]->outputFunctionGroup == ConfigDataStructIOBk16::OUTPUT_FUNCTION_GROUP_GATE_PRIOTKRIT) && (outputs[i]->prGateNumber == number))
+		if ((outputs[i]->outputFunctionGroup == ConfigDataStructIOBk16::OUTPUT_FUNCTION_GROUP_GATE_CLOSE) && (outputs[i]->prGateNumber == number))
 		{
 			setOutput((outputs[i]->bkAddress - 1) * 8 + outputs[i]->numberOnDevice - 1, IIODevice::OUTPUT_STATE_OFF);
 		}
