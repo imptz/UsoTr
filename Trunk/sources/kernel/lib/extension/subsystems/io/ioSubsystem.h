@@ -103,6 +103,8 @@ class IOSubsystem : public Singleton<IOSubsystem>, public ISubsystem
 		void disablePrFaultOutputs(unsigned char number);
 		void enableGateFaultOutputs(unsigned char number);
 		void disableGateFaultOutputs(unsigned char number);
+		void disableAutoModeOutput();
+		void enableAutoModeOutput();
 #pragma endregion 		
 	private:
 		void enableDevicesDebug();

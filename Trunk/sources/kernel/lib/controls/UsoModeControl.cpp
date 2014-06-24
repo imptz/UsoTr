@@ -4,6 +4,7 @@
 #include "../hdd/hddManager.h"
 #include "../logic/Logic.h"
 #include "../DEBUG/serialDebug.h"
+#include "../extension/subsystems/io/ioSubsystem.h"
 
 #pragma warning (disable : 4355)
 
@@ -47,10 +48,12 @@ switch(mode)
 		case USO_MODE_FULL_AUTO:
 			modeButton->setName(modeFullAutoText);
 			Log::getSingleton().add(LOG_MESSAGE_FROM_APPLICATION, LOG_MESSAGE_TYPE_SYSTEM, USO_MODE_SET_MESSAGE_FULL_AUTO, actor, 0);
+			IOSubsystem::getSingleton().enableAutoModeOutput();
 			break;
 		case USO_MODE_HALF_AUTO:
 			modeButton->setName(modeHalfAutoText);
 			Log::getSingleton().add(LOG_MESSAGE_FROM_APPLICATION, LOG_MESSAGE_TYPE_SYSTEM, USO_MODE_SET_MESSAGE_HALF_AUTO, actor, 0);
+			IOSubsystem::getSingleton().disableAutoModeOutput();
 			break;
 		case USO_MODE_TOOLS:
 			Log::getSingleton().add(LOG_MESSAGE_FROM_APPLICATION, LOG_MESSAGE_TYPE_SYSTEM, USO_MODE_SET_MESSAGE_TOOLS, actor, 0);
